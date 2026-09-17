@@ -454,13 +454,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416316635}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12278779, y: 0.6963643, z: -0.12278779, w: 0.6963643}
-  m_LocalPosition: {x: -4.222, y: 3.274, z: 1.502}
+  m_LocalRotation: {x: 0.12278779, y: -0.6963643, z: 0.12278779, w: 0.6963643}
+  m_LocalPosition: {x: 4.93, y: 4.2, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 20, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: -90, z: 0}
 --- !u!114 &416316639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,8 +869,8 @@ Transform:
   m_GameObject: {fileID: 596862728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.102, y: 1.205, z: 1.5624}
-  m_LocalScale: {x: 9.61, y: 5, z: 0.44320306}
+  m_LocalPosition: {x: -20.21, y: 1.205, z: 1.5624}
+  m_LocalScale: {x: -4.562341, y: 5, z: 0.44320306}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1026,6 +1026,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344edad2a970e9a4a9ce067c065d5d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1571591371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571591373}
+  - component: {fileID: 1571591372}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1571591372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571591371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b122e03a2e64c5345a56716a210e2c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
+  trainPrefabs: []
+  jumpPrefabs: []
+  duckPrefabs: []
+  laneCount: 3
+  laneWidth: 1.4
+  groundY: 0
+  startSpeed: 6
+  maxSpeed: 14
+  secondsToMaxSpeed: 120
+  playOnStart: 1
+  minReactionTime: 1.2
+  extraRandomTime: 0.8
+  breatherChance: 0.12
+  breatherTime: 1.5
+  spawnDistance: 60
+  startEmptyDistance: 30
+  despawnBehind: 5
+  minObstacleChance: 0.35
+  maxObstacleChance: 0.75
+  trainChance: 0.5
+  safeLaneObstacleChance: 0.3
+  safeLaneMoveChance: 0.4
+  minTrainLength: 6
+  maxTrainLength: 16
+  gapAfterTrain: 3
+--- !u!4 &1571591373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571591371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.53, y: 1.22, z: 1.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1644773533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1219,6 +1288,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 416316638}
   - {fileID: 47425153}
+  - {fileID: 1571591373}
   - {fileID: 41828494}
   - {fileID: 455702518}
   - {fileID: 284067412}
